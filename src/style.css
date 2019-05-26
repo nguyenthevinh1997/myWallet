@@ -1,0 +1,9 @@
+.done {
+    text-decoration: line-through;
+    color: gray;
+    font-style: italic;
+  }
+  li:hover{
+    cursor: pointer;
+  }
+  
