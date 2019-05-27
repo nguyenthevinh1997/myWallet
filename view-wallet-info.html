@@ -22,59 +22,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" href="view-wallet-info.html">View Wallet Info </a>
-        <a class="nav-item nav-link active" href="index.html">Create Account <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="view-wallet-info.html">View Wallet Info <span
+            class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link " href="index.html">Create Account</a>
       </div>
     </div>
   </nav>
   <div class="container">
-    <section id="createAccount">
-      <div class="card" id="card-CreateAccount">
-        <div class="card-body">
-          <h2>Create New Account</h2>
-          <form>
-            <div class="form-group">
-              <label for="enterPassword">Enter a password</label>
-              <input type="password" class="form-control" id="enterPassword" placeholder="Password">
-            </div>
-            <button type="button" name="button" class="btn btn-primary" id="createNewAccount">Create New
-              Account</button>
-          </form>
-          <p>This password encrypts your private key. This does not as a seed to generate your</p>
-        </div>
-      </div>
-      <div class="card" id="card-download" style="display: none;">
-        <div class="card-body">
-          <h2>Download Keystore File</h2>
-          <a href="" id="download" download="keystore">Download Keystore File</a>
-          <form style="margin-top: 10px;">
-            <div class="form-group">
-              <button type="button" name="button" class="btn btn-primary" id="continue" disabled>I understand. Continue.
-              </button>
-            </div>
-          </form>
-          <p>**Do not lost it!** It cannot be recovered if you lose it.</p>
-          <p>**Do not share it!** Your funds will be stolen if you use this file on a malicious/phising site.</p>
-          <p>**Make a backup!** Secure it like the millions of dollars it may one day be worth.</p>
-        </div>
-      </div>
-      <div class="card" id="card-SavePrivateKey" style="display: none;">
-        <div class="card-body">
-          <h2>Save Your Private Key</h2>
-          <form>
-            <div class="form-group">
-              <textarea class="form-control" id="yourPrivateKey" rows="3" readonly></textarea>
-            </div>
-            <button type="button" name="button" class="btn btn-primary" id="saveYourAddress">
-              Save Your Address
-            </button>
-          </form>
-          <p>**Do not lost it!** It cannot be recovered if you lose it.</p>
-          <p>**Do not share it!** Your funds will be stolen if you use this file on a malicious/phising site.</p>
-          <p>**Make a backup!** Secure it like the millions of dollars it may one day be worth.</p>
-        </div>
-      </div>
-    </section>
     <section id="importAccount">
       <div class="card">
         <div class="card-header bg-secondary text-light">
@@ -121,16 +75,16 @@
         <div class="card-body">
           <table class="table">
             <tbody>
-              <tr id="yourAddress">
-                <th scope="row">Your Address</th>
+              <tr>
+                <th scope="row" id="yourAddress">Your Address</th>
                 <td></td>
               </tr>
-              <tr id="yourPrivateKey">
-                <th scope="row">Private Key</th>
+              <tr>
+                <th scope="row" id="yourPrivateKey">Private Key</th>
                 <td></td>
               </tr>
-              <tr id="yourBalance">
-                <th scope="row">Account Balance</th>
+              <tr>
+                <th scope="row" id="yourBalance">Account Balance</th>
                 <td></td>
               </tr>
             </tbody>
