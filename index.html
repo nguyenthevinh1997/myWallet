@@ -23,12 +23,12 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="nav navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" id="pills-importAccount" data-toggle="pill"
-            href="#importAccount" aria-selected="true">View wallet info</a>
+          <a class="nav-link active" id="pills-importAccount" data-toggle="pill" href="#importAccount"
+            aria-selected="true">View wallet info</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="pills-createAccount"  data-toggle="pill" href="#createAccount"
-             aria-selected="false">Create Account</a>
+          <a class="nav-link" id="pills-createAccount" data-toggle="pill" href="#createAccount"
+            aria-selected="false">Create Account</a>
         </li>
       </ul>
     </div>
@@ -41,7 +41,8 @@
           <form>
             <div class="form-group">
               <label for="enterPassword">Enter a password</label>
-              <input type="password" class="form-control" id="enterPassword" autocomplete="password" required placeholder="Password">
+              <input type="password" class="form-control" id="enterPassword" autocomplete="password" required
+                placeholder="Password">
             </div>
             <button type="button" name="button" class="btn btn-primary" id="createNewAccount">Create New
               Account</button>
@@ -96,7 +97,7 @@
               aria-describedby="basic-addon1">
           </div>
           <button type="button" class="btn btn-secondary" id="unlockWithKey">Unlock</button>
-          <p>This password encrypts your private key. This does not as a seed to generate your</p>
+          <p>This password encrypts your private key. This does not as a seed to generate your keys.</p>
         </div>
       </div>
       <div class="card">
@@ -113,7 +114,8 @@
           <form>
             <div class="form-group">
               <label for="enterYourPassword">Please enter a password</label>
-              <input type="password" class="form-control" id="enterYourPassword" autocomplete="password" required placeholder="Password">
+              <input type="password" class="form-control" id="enterYourPassword" autocomplete="password" required
+                placeholder="Password">
             </div>
             <button type="button" class="btn btn-secondary" id="unlockWithKeystore">Unlock</button>
           </form>
@@ -142,6 +144,60 @@
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </section>
+    <section id="sendETH">
+      <div class="card">
+        <div class="card-header bg-secondary text-light">
+          Send Ether & Tokens
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="toAddress">To address</label>
+              <input type="text" class="form-control" id="toAddress" placeholder="0x348ce5...">
+            </div>
+            <div class="form-group">
+              <label for="amountToSend">Amount to Send</label>
+              <div class="input-group">
+                <input type="number" class="form-control" id="amountToSend">
+                <div class="input-group-append">
+                  <select id="inputState" class="form-control">
+                    <option selected>Rinkeby ETH</option>
+                    <option>...</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="gasPrice">Gas Price</label>
+              <div class="input-group">
+                <input type="number" class="form-control" id="gasPrice">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="">wei</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="gasLimit">Gas Limit</label>
+              <input type="number" class="form-control" id="gasLimit">
+            </div>
+          </form>
+          <button type="button" class="btn btn-secondary btn-lg btn-block" id="generateTransaction">Generate
+            Transaction</button>
+          <div id="groupSend" class="row">
+            <div class="form-group col-sm">
+              <label for="rawTransaction">Raw Transaction</label>
+              <textarea class="form-control" id="rawTransaction" rows="3" readonly></textarea>
+            </div>
+            <div class="form-group col-sm">
+              <label for="signedTransaction">Raw Transaction</label>
+              <textarea class="form-control" id="signedTransaction" rows="3" readonly></textarea>
+            </div>
+          </div>
+          <button type="button" class="btn btn-secondary btn-lg btn-block" id="sendTransaction">Send
+            Transaction</button>
         </div>
       </div>
     </section>
